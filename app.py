@@ -42,7 +42,6 @@ def test_login():
         data=payload
     )
     result = resp.json()
-    print(f"Code: {result.get('code')} — {result.get('message', '')}")
     return jsonify({"code": result.get("code"), "message": result.get("message", "")})
 
 if __name__ == '__main__':
